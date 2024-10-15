@@ -1,0 +1,169 @@
+/* Reset default margin and padding */
+body, header {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply the Poppins font family to the body */
+body {
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #DAF0F7;
+}
+
+/* Style for the header */
+header {
+  background-color: #779ECB; /* Darker green for navbar */
+  padding: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the navigation items */
+}
+
+/* Style for the navigation menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px; /* Add horizontal space between the list items */
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the main intro section */
+main .intro {
+  color: #32412F; /* Dark green for text */
+  padding: 40px;
+}
+
+main .intro h1 {
+  margin-top: 0px; /* Add space above the "welcome to my website!" text */
+}
+
+main .intro p {
+  margin-top: 50px; /* Add space above the "lets learn some math" text */
+}
+
+/* Style for the first image */
+.side-image {
+  width: 200px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  float: left; /* Float the image to the left */
+  margin: 0 20px 20px 250px; /* Add some margin around the image */
+}
+
+/* Style for the second image */
+.side-image-2 {
+  width: 200px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  float: right; /* Float the image to the right */
+  margin: 0 250px 20px 350px; /* Add some margin around the image */
+}
+
+/* Style for the inline GIF */
+.inline-gif {
+  width: 50px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  vertical-align: middle; /* Align the GIF vertically with the text */
+  margin-left: 3px; /* Add some space between the text and the GIF */
+}
+
+/* Center the content */
+.content-center {
+  text-align: right; /* Align text and buttons to the right */
+  float: right; /* Remove floating */
+  margin-right: -30px; /* Add space from the right edge */
+  margin-top: 90px; /* Space above the content */
+}
+/* Style for the buttons container */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create a 2x2 grid */
+  gap: 80px; /* Add space between the buttons */
+  justify-content: end; /* Center the grid horizontally */
+  margin-top: -10px; /* Add some space above the buttons */
+}
+
+/* Style for the buttons */
+.btn {
+  background-color: #779ECB; /* Darker green background */
+  color: white;
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 40%; /* Make the buttons round */
+  width: 140px; /* Set a fixed width */
+  height: 140px; /* Set a fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif; /* Change the font of the button text */
+}
+
+.btn:hover {
+  background-color: #32412F; /* Darker shade on hover */
+}
+
+/* Style for the lilypad buttons */
+.lilypad-btn {
+  background-image: url('lilypad.png'); /* Path to your lilypad image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  border: none;
+  color: white; /* Text color */
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: capitalize; /* Capitalize button text */
+}
+
+.lilypad-btn:hover {
+  opacity: 0.8; /* Slightly dim the button on hover */
+}
+
+
+/* New styles for GIFs */
+.gif-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.side-gif {
+  height: auto; /* Maintain aspect ratio */
+}
+
+.large-gif {
+  width: 340px; /* Increased width for tom.gif */
+}
+
+.small-gif {
+  width: 200px; /* Default width for dance.webp */
+}
+

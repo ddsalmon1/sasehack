@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animath</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"> 
+  <style>
+    /* Add styles for the mute button */
+    #mute-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #779ECB; /* Darker green background */
+      color: white; /* Button text color */
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #mute-btn:hover {
+      background-color: #32412F; /* Darker shade on hover */
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="home" class="intro">
+      <h1>welcome to animath!</h1>
+      <p><img id="inline-gif-1" src="plus.gif" alt="Small GIF" class="inline-gif">  lets learn some math!<img id="inline-gif-2" src="plus.gif" alt="Small GIF" class="inline-gif"></p>
+      <p>click on a math topic to start learning! </p>
+      <img id="side-image" src="flower.gif" alt="Pixel Flowers" class="side-image">
+      <img id="side-image-2" src="flower.gif" alt="Pixel Flowers" class="side-image-2">
+      
+      <div class="content-center">
+        <div class="buttons">
+        <a href="Addition.html"><button id="addition-btn" class="btn lilypad-btn">addition</button></a>
+        <a href="Subtraction.html"><button id="subtraction-btn" class="btn lilypad-btn">subtraction</button></a>
+        <a href="Multiplication.html"><button id="multiplication-btn" class="btn lilypad-btn">multiplication</button></a>
+        <a href="Division.html"><button id="division-btn" class="btn lilypad-btn">division</button></a>
+      </div>
+    </section>
+
+    <section id="contact" style="display: none;">
+      <h2>This project was made by : printf("^_^"); from SASEHack! </h2>
+      <p>For any inquiries, please contact us through discord @ ddsalmon.</p>
+    </section>
+  </main>
+
+  <div class="gif-container">
+    <figure>
+      <img src="tom.gif" alt="Tom GIF" class="side-gif large-gif">
+    </figure>
+    <figure>
+      <img src="dance.webp" alt="Dance GIF" class="side-gif small-gif">
+    </figure>
+  </div>
+
+  <audio id="background-music" src="background-music.mp3" loop autoplay></audio>
+  <button id="mute-btn">Mute</button>
+
+  <script>
+    // Function to handle navigation
+    function navigateTo(sectionId) {
+      document.querySelectorAll('main section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
+    }
+    
+    // Add event listeners to navigation links
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const sectionId = this.getAttribute('href').substring(1);
+        navigateTo(sectionId);
+      });
+    });
+
+
+    // Example usage: Simulate completing a round of questions for addition
+    document.getElementById('addition-btn').addEventListener('click', function() {
+      completeRound('addition');
+    });
+
+    document.getElementById('subtraction-btn').addEventListener('click', function() {
+      completeRound('subtraction');
+    });
+
+    document.getElementById('multiplication-btn').addEventListener('click', function() {
+      completeRound('multiplication');
+    });
+
+    document.getElementById('division-btn').addEventListener('click', function() {
+      completeRound('division');
+    });
+
+    // Lower the volume of the background music
+    document.getElementById('background-music').volume = 0.2; // Set volume to 20%
+
+    // Mute button functionality
+    document.getElementById('mute-btn').addEventListener('click', function() {
+      const audio = document.getElementById('background-music');
+      if (audio.muted) {
+        audio.muted = false;
+        this.textContent = 'mute';
+      } else {
+        audio.muted = true;
+        this.textContent = 'unmute';
+      }
+    });
+
+    // Navigate to the home section by default
+    navigateTo('home');
+  </script>
+</body>
+</html>
