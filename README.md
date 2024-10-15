@@ -1,4 +1,4 @@
-# sasehack
+# Animath
 
 ## Inspiration
 As Whitney Houston famously said, “The children are our future, teach them well and let them lead the way”. In doing so, we decided to create a webpage that specializes in teaching children math topics (addition, subtraction, multiplication and division) in a fun, interactive way that will boost productivity and give more of an incentive to complete more questions. 
